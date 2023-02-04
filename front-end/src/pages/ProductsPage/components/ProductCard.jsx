@@ -6,24 +6,6 @@ export default function ProductCard({ product, cart, setCart }) {
   const [quantity, setQuantity] = useState(0);
   const [priceFormatted, setPriceFormatted] = useState('');
 
-  // function editProductQuantity() {
-  //   const updateState = {
-  //     ...cart,
-  //     [product.name]: {
-  //       quantity,
-  //       price: product.price,
-  //     },
-  //   };
-  //   setCart(updateState);
-  //   // console.log('updateState', updateState);
-  // }
-
-  // const updateState = {
-  //   name: product.name,
-  //   quantity,
-  //   price: product.price,
-  // };
-
   function editProductQuantity() {
     const storage = localStorage.getItem('cart');
     const parseStorage = JSON.parse(storage);
@@ -37,7 +19,6 @@ export default function ProductCard({ product, cart, setCart }) {
         {
           name: product.name,
           quantity,
-          // price: priceFormatted,
           price: product.price,
           id: product.id,
         }];
@@ -49,7 +30,6 @@ export default function ProductCard({ product, cart, setCart }) {
       {
         name: product.name,
         quantity,
-        // price: priceFormatted,
         price: product.price,
         id: product.id,
       }];
@@ -80,13 +60,6 @@ export default function ProductCard({ product, cart, setCart }) {
   useEffect(() => {
     editProductQuantity();
   }, [quantity]);
-
-  // const setCartEmptyOnFirstLoad = () => {
-  //   const cart = localStorage.getItem('cart');
-  //   if (!cart) {
-
-  //   }
-  // };
 
   useEffect(() => {
     setCart([]);
@@ -120,10 +93,13 @@ export default function ProductCard({ product, cart, setCart }) {
           text-black
           font-Roboto
           fs-5 fw-bold
-          h-25"
+          h-25
+          py-2
+          px-3"
             data-testid={ `customer_products__element-card-price-${product.id}` }
           >
-            R$:
+            R$
+            {' '}
             {priceFormatted}
           </p>
         </div>
@@ -150,7 +126,7 @@ export default function ProductCard({ product, cart, setCart }) {
             justify-content-center
             flex-nowrap
             nameProducts
-          w-100"
+            w-100"
           data-testid={ `customer_products__element-card-title-${product.id}` }
         >
           { product.name }
@@ -165,7 +141,8 @@ export default function ProductCard({ product, cart, setCart }) {
         >
           <button
             className="btnAddOrRemove
-            rounded-start"
+            rounded-start
+            text-white"
             data-testid={ `customer_products__button-card-add-item-${product.id}` }
             type="button"
             onClick={ handleOnClickAddProduct }
@@ -174,7 +151,7 @@ export default function ProductCard({ product, cart, setCart }) {
           </button>
 
           <input
-            className="w-25"
+            className="inputQuantityNumber"
             data-testid={ `customer_products__input-card-quantity-${product.id}` }
             value={ quantity }
             onChange={ ({ target: { value } }) => {
@@ -185,7 +162,8 @@ export default function ProductCard({ product, cart, setCart }) {
 
           <button
             className="btnAddOrRemove
-            rounded-end"
+            rounded-end
+            text-white"
             data-testid={ `customer_products__button-card-rm-item-${product.id}` }
             type="button"
             onClick={ handleOnClickRemoveProduct }

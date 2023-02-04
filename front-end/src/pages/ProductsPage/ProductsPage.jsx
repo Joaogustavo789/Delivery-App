@@ -54,6 +54,7 @@ export default function ProductsPage() {
         <button
           className="btn-viwe-cart
           btnPosition
+          fs-4
           "
           data-testid="customer_products__button-cart"
           type="button"
