@@ -110,7 +110,7 @@ function RegisterPage() {
           align-items-center flex-column px-5 pt-4"
         >
 
-          <img src={ logo } alt="" className={ styles.logo } />
+          <img src={ logo } alt="" className="w-25" />
 
           <Label htmlFor="register-name-input" text="Nome">
             <Input

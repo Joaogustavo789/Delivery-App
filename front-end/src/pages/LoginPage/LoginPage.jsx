@@ -118,7 +118,7 @@ export default function LoginPage() {
           align-items-center flex-column px-5"
         >
 
-          <img src={ logo } alt="" className={ styles.logo } />
+          <img src={ logo } alt="" className="w-25" />
 
           <h2 className="text-center pt-1 mb-0">
             Login
