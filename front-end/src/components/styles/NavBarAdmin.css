@@ -1,0 +1,31 @@
+.navbarAdminPage {
+  background-color: var(--dark-blue);
+  width: 100%;
+}
+
+.btnSair {
+  background-color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  border-radius: 12px;
+}
+
+.btnSair:hover {
+  background-color: rgb(3, 119, 168);
+  border: 2px solid var(--dark-blue);
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.navbar_username {
+  display: none;
+}
+
+@media ( min-width : 576px ) {
+
+  .navbar_username {
+    display: block;
+  }
+
+}

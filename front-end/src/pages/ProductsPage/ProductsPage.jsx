@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import getAllProductsService from '../../services/getAllProductsService';
 import ProductCard from './components/ProductCard';
+import './Products.css';
 
 export default function ProductsPage() {
   const history = useHistory();
@@ -41,34 +42,54 @@ export default function ProductsPage() {
   }, [cart]);
 
   return (
-    <section>
+    <div>
       <Navbar />
-      <button
-        data-testid="customer_products__button-cart"
-        type="button"
-        onClick={ () => history.push('/customer/checkout') }
-        disabled={ isDisabled }
+      <section
+        className="d-flex
+        flex-wrap
+        w-100
+      "
       >
-        <span> Ver Carrinho: R$ </span>
-        <span data-testid="customer_products__checkout-bottom-value">
-          {' '}
-          {totalPrice.toLocaleString('pt-br', {
-            style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
-          })}
-          {' '}
-        </span>
-      </button>
-      <div>
-        {
-          products.map((product) => (
-            <ProductCard
-              key={ product.id }
-              product={ product }
-              cart={ cart }
-              setCart={ setCart }
-            />))
-        }
-      </div>
-    </section>
+
+        <button
+          className="btn-viwe-cart
+          btnPosition
+          fs-4
+          "
+          data-testid="customer_products__button-cart"
+          type="button"
+          onClick={ () => history.push('/customer/checkout') }
+          disabled={ isDisabled }
+        >
+          <span> Ver Carrinho: R$ </span>
+          <span data-testid="customer_products__checkout-bottom-value">
+            {' '}
+            {totalPrice.toLocaleString('pt-br', {
+              style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2,
+            })}
+            {' '}
+          </span>
+        </button>
+        <div
+          className="d-flex
+        flex-wrap
+        gap-4
+        justify-content-center
+        container-card-products
+        h-50 w-100
+        "
+        >
+          {
+            products.map((product) => (
+              <ProductCard
+                key={ product.id }
+                product={ product }
+                cart={ cart }
+                setCart={ setCart }
+              />))
+          }
+        </div>
+      </section>
+    </div>
   );
 }

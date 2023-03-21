@@ -1,0 +1,24 @@
+.registerPageContainer {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.registerPageContainer:after {
+  height: 100vh;
+  width: 100vw;
+  content: '';
+  opacity: 0.7;
+  position: absolute;
+}
+
+.registerPageBg:after {
+  background:url('../../images/register-page-bg.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .logo {
+  width: 30%;
+} */

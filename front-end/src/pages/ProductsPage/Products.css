@@ -1,0 +1,63 @@
+.btn-viwe-cart {
+  background-color: var(--dark-blue);
+  border-radius: 6px;
+  color: var(--off-white);
+}
+
+.btn-viwe-cart:hover {
+  translate: 0 -5px;
+}
+
+.btnPosition {
+  bottom: 70%;
+  height: 7%;
+  left: 72%;
+  position: fixed;
+  right: 0%;
+  top: 90%;
+  width: 25%;
+}
+
+.container-card-products {
+  margin-top: 4%;
+  max-height: 100%;
+}
+
+.container-card {
+  box-shadow: 5px 5px 5px rgb(189, 185, 185);
+}
+
+.img {
+  max-height: 15em;
+}
+
+.btnAddOrRemove {
+  background-color: var(--dark-blue);
+  margin: 0 4px;
+  width: 2.5rem;
+  border: 0;
+}
+
+.infCard {
+  background-color: var(--light-gray);
+}
+
+.inputQuantity {
+  margin-bottom: 4%;
+}
+
+.inputQuantityNumber {
+  width: 20%;
+  text-align: center;
+  border: 0;
+}
+
+.nameProducts {
+  margin-top: 4%;
+}
+
+.cardDimension {
+  height: 100%;
+  width: 20%;
+}
+

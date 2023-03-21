@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
 import { loginService } from '../../services/useLoginService';
+import Button from './components/Button';
+import Input from './components/Input';
+import styles from './LoginPage.module.css';
+import Label from './components/Label';
+import logo from '../../images/silverio_lanches_logo.png';
 
 export default function LoginPage() {
   const [doesUserExist, setDoesUserExist] = useState(true);
@@ -64,11 +70,8 @@ export default function LoginPage() {
     const userData = JSON.parse(localStorage.getItem('user'));
     if (userData) {
       const { role } = userData;
-      // if (role === 'customer') {
-      //   history.push('/customer/orders');
-      // } else {
+
       redirectUserByRole(role);
-      // }
     }
   }, []);
 
@@ -92,49 +95,98 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        data-testid="common_login__input-email"
-        placeholder="Email"
-        value={ email }
-        onChange={ ({ target: { value } }) => setEmail(value) }
-      />
-
-      <input
-        type="text"
-        data-testid="common_login__input-password"
-        placeholder="Password"
-        value={ password }
-        onChange={ ({ target: { value } }) => setPassword(value) }
-      />
-
-      <button
-        data-testid="common_login__button-login"
-        onClick={ handleOnClickLoginBtn }
-        type="button"
-        disabled={ isLoginBtnDisabled }
+    <Container
+      className={ `p-0 m-0 d-flex align-items-center
+        ${styles.loginPageContainer} ${styles.loginPageBg}` }
+      style={ { fontFamily: 'Roboto' } }
+    >
+      <Col
+        xs={ { offset: 1, size: 10 } }
+        sm={ { offset: 2, size: 8 } }
+        md={ { offset: 3, size: 6 } }
+        xl={ { offset: 4, size: 4 } }
+        className="d-flex flex-column p-0 pt-4"
+        style={ {
+          backgroundColor: '#EAF1EFCC',
+          borderRadius: '4px',
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+          zIndex: '1',
+        } }
       >
-        Login
-      </button>
+        <Row
+          className="d-flex justify-content-center
+          align-items-center flex-column px-5"
+        >
 
-      <button
-        data-testid="common_login__button-register"
-        onClick={ () => { history.push('/register'); } }
-        type="button"
-      >
-        Register
-      </button>
+          <img src={ logo } alt="" className="w-25" />
 
-      {
-        !doesUserExist && (
+          <h2 className="text-center pt-1 mb-0">
+            Login
+          </h2>
+
+          <Label htmlFor="login-email-input" text="Email">
+
+            <Input
+              type="text"
+              id="login-email-input"
+              dataTestId="common_login__input-email"
+              placeholder="email@tryber.com.br"
+              value={ email }
+              onChange={ ({ target: { value } }) => setEmail(value) }
+              label="Login"
+            />
+          </Label>
+
+          <Label htmlFor="login-password-input" text="Password">
+
+            <Input
+              type="password"
+              id="login-password-input"
+              dataTestId="common_login__input-password"
+              placeholder="Password"
+              value={ password }
+              onChange={ ({ target: { value } }) => setPassword(value) }
+              label="Senha"
+              labelHtmlFor="login-password-input"
+            />
+          </Label>
+
+          <Button
+            dataTestId="common_login__button-login"
+            onClick={ () => handleOnClickLoginBtn() }
+            disabled={ isLoginBtnDisabled }
+            style={ {
+              backgroundColor: '#034C6B',
+              color: 'white',
+              opacity: isLoginBtnDisabled && '0.6',
+              transition: '200ms',
+            } }
+          >
+            Login
+          </Button>
+
+          <Button
+            dataTestId="common_login__button-register"
+            onClick={ () => { history.push('/register'); } }
+            style={ {
+              backgroundColor: '#EAF1EFCC',
+              color: '#034C6B',
+              borderColor: '#034C6B',
+            } }
+          >
+            Ainda não tenho conta
+          </Button>
+
           <p
             data-testid="common_login__element-invalid-email"
+            className="text-center text-danger fw-bold pt-2"
           >
-            This email is invalid!
+              &nbsp;
+            { !doesUserExist && 'This email is invalid!' }
           </p>
-        )
-      }
-    </div>
+
+        </Row>
+      </Col>
+    </Container>
   );
 }

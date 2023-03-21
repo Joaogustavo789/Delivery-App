@@ -1,0 +1,136 @@
+.order-details {
+  border: 1px solid #B1C2BE;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #001813;
+}
+
+.customer-order-container {
+  padding: 2rem;
+}
+
+.order-title {
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.order-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:row;
+  background-color: #EAF1EF;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  height: 10%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.row-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: #EAF1EF;
+  border-radius: 20px 20px 20px 20px;
+  height: 50px;
+  margin: 10px;
+}
+
+.span-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5FBEF;
+  border-radius: 20px 0px 0px 20px;
+  padding: 5px;
+  width: 10%;
+  height: 50px;
+}
+
+.order-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  height: 50px;
+  width: 45%;
+}
+
+.order-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #034C6B;
+  color: #F2FFFC;
+  height: 50px;
+  width: 15%;
+  padding: 5px;
+}
+
+.unit-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#9EB3C2;
+  color: #F2FFFC;
+  height: 50px;
+  width: 15%;
+  padding: 5px;
+}
+
+.product-total-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #748B75;
+  color: #F2FFFC;
+  height: 50px;
+  width: 15%;
+  padding: 5px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.total-price-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.total-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #034C6B;
+  color: #F2FFFC;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  width: 200px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: center;
+}

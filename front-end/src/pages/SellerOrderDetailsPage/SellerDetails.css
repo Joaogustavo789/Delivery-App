@@ -1,0 +1,10 @@
+.seller_totalPrice {
+  background-color: var(--dark-blue);
+  bottom: 1.5rem;
+  position: absolute;
+  text-align: center;
+}
+
+.seller_totalPrice:hover {
+  cursor: auto;
+}

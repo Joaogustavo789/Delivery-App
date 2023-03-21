@@ -5,6 +5,7 @@ import ProductDetailsRowOrder from '../../components/ProductDetailsRowOrder';
 import getAllUsers from '../../services/getAllUsers';
 import getSaleProducts from '../../services/getSaleProducts';
 import updateOrderStatus from '../../services/updateOrderStatus';
+import './CustomerOrderDetailsPage.css';
 
 export default function CustomerOrderDetailsPage() {
   // const orders = useProductsRowsMocks();
@@ -47,63 +48,49 @@ export default function CustomerOrderDetailsPage() {
   return (
     <div>
       <Navbar />
-
-      <h3>Detalhe do pedido</h3>
-      <div>
-        <div>
-          <span>Pedido</span>
-          <span
-            data-testid="customer_order_details__element-order-details-label-order-id"
-          >
-            {id}
-          </span>
-          <span>Vendedor(a)</span>
-          <span
-            data-testid="customer_order_details__element-order-details-label-seller-name"
-          >
-            { sellerName }
-          </span>
-          <span
-            data-testid="customer_order_details__element-order-details-label-order-date"
-          >
-            { products.length > 0
+      <div className="customer-order-container">
+        <h3 className="order-title">Detalhes do pedido</h3>
+        <div className="order-details">
+          <div className="order-description py-3">
+            <span>{`Pedido ${id} `}</span>
+            <span>{`Vendedor(a) ${sellerName} `}</span>
+            <span>
+              { products.length > 0
             && new Date(products[0].sales.saleDate).toLocaleDateString('pt-br')}
-          </span>
-          <span>Status do pedido</span>
-          <span
-            data-testid={
-              `customer_order_details__element-order-details-label-delivery-status${id}`
-            }
-          >
-            { saleStatus }
-          </span>
-          <button
-            type="button"
-            onClick={ handleClick }
-            data-testid="customer_order_details__button-delivery-check"
-            disabled={ saleStatus !== 'Em Trânsito' }
-          >
-            MARCAR COMO ENTREGUE
-          </button>
-        </div>
-        <div>
-          {products.map((order, index) => (
-            <ProductDetailsRowOrder
-              key={ order.products.id }
-              product={ order.products }
-              quantity={ order.quantity }
-              index={ index }
-              pageName="order_details"
-            />
-          ))}
-        </div>
-        <div>
-          <span>Total:</span>
-          <span data-testid="customer_order_details__element-order-total-price">
-            { getTotalPrice() }
-          </span>
+            </span>
+            <span>{`Status do pedido: ${saleStatus} `}</span>
+            <button
+              type="button"
+              onClick={ handleClick }
+              disabled={ saleStatus !== 'Em Trânsito' }
+              className="btn btn-secondary"
+            >
+              MARCAR COMO ENTREGUE
+            </button>
+          </div>
+          <div>
+            {products.map((order, index) => (
+              <ProductDetailsRowOrder
+                key={ order.products.id }
+                product={ order.products }
+                quantity={ order.quantity }
+                index={ index }
+                pageName="order_details"
+              />
+            ))}
+          </div>
+          <div className="total-price-div">
+            <div className="total-price">
+              <span>Total: &nbsp;</span>
+              <span>
+                { getTotalPrice() }
+              </span>
+            </div>
+
+          </div>
         </div>
       </div>
+
     </div>
   );
 }

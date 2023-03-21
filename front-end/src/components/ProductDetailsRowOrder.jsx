@@ -5,44 +5,20 @@ export default function ProductDetailsRowOrder({
   quantity,
   index }) {
   return (
-    <div>
-      <div
-        data-testid={
-          `customer_order_details__element-order-table-item-number-${index}`
-        }
-      >
+    <div className="row-order">
+      <div className="order-number">
         {index + 1}
       </div>
-
-      <div
-        data-testid={
-          `customer_order_details__element-order-table-name-${index}`
-        }
-      >
+      <div className="order-product">
         {product.name}
       </div>
-
-      <div
-        data-testid={
-          `customer_order_details__element-order-table-quantity-${index}`
-        }
-      >
+      <div className="order-quantity">
         {quantity}
       </div>
-
-      <div
-        data-testid={
-          `customer_order_details__element-order-table-unit-price-${index}`
-        }
-      >
+      <div className="unit-price">
         {((product.price)).toString().replace('.', ',')}
       </div>
-
-      <div
-        data-testid={
-          `customer_order_details__element-order-table-sub-total-${index}`
-        }
-      >
+      <div className="product-total-price">
         {(Number(product.price.replace(',', '.')) * Number(quantity)).toFixed(2)
           .toString().replace('.', ',')}
       </div>

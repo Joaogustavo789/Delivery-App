@@ -1,10 +1,10 @@
-import { Link, useHistory } from 'react-router-dom';
-
+import { useHistory } from 'react-router-dom';
 import './styles/NavBarAdmin.css';
 import logo from '../images/silverio_lanches_logo.png';
 
-export default function Navbar() {
+function NavbarAdmin() {
   const history = useHistory();
+
   function handleOnClickLoggout() {
     localStorage.clear();
     history.push('/login');
@@ -19,34 +19,25 @@ export default function Navbar() {
     >
       <div className="d-flex gap-4 align-items-center">
         <img src={ logo } alt="logo" className="logo" />
-        <Link
-          className="text-white font-Roboto fs-5 fw-bold text-decoration-none"
-          to="/customer/products"
-          data-testid="customer_products__element-navbar-link-products"
-        >
-          PRODUTOS
-        </Link>
-
-        <Link
-          className="text-white font-Roboto fs-5 fw-bold text-decoration-none"
-          to="/customer/orders"
+        <span
+          className="text-white font-Roboto fs-5 fw-bold"
           data-testid="customer_products__element-navbar-link-orders"
         >
-          MEUS PEDIDOS
-        </Link>
+          GERENCIAR USUÁRIOS
+        </span>
       </div>
 
       <div className="d-flex gap-4 align-items-center">
         <span
-          className="text-white font-Roboto fs-5 fw-bold"
+          className="text-white font-Roboto fs-5 fw-light ps-2"
           data-testid="customer_products__element-navbar-user-full-name"
         >
           {user?.name}
         </span>
         <button
-          className="btnSair text-white font-Roboto fs-5 fw-light me-2"
           onClick={ handleOnClickLoggout }
           type="button"
+          className="btnSair text-white font-Roboto fs-5 fw-light me-2"
           data-testid="customer_products__element-navbar-link-logout"
         >
           Sair
@@ -55,3 +46,5 @@ export default function Navbar() {
     </header>
   );
 }
+
+export default NavbarAdmin;

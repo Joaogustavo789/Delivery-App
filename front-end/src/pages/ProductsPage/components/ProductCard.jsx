@@ -6,24 +6,6 @@ export default function ProductCard({ product, cart, setCart }) {
   const [quantity, setQuantity] = useState(0);
   const [priceFormatted, setPriceFormatted] = useState('');
 
-  // function editProductQuantity() {
-  //   const updateState = {
-  //     ...cart,
-  //     [product.name]: {
-  //       quantity,
-  //       price: product.price,
-  //     },
-  //   };
-  //   setCart(updateState);
-  //   // console.log('updateState', updateState);
-  // }
-
-  // const updateState = {
-  //   name: product.name,
-  //   quantity,
-  //   price: product.price,
-  // };
-
   function editProductQuantity() {
     const storage = localStorage.getItem('cart');
     const parseStorage = JSON.parse(storage);
@@ -37,7 +19,6 @@ export default function ProductCard({ product, cart, setCart }) {
         {
           name: product.name,
           quantity,
-          // price: priceFormatted,
           price: product.price,
           id: product.id,
         }];
@@ -49,7 +30,6 @@ export default function ProductCard({ product, cart, setCart }) {
       {
         name: product.name,
         quantity,
-        // price: priceFormatted,
         price: product.price,
         id: product.id,
       }];
@@ -81,45 +61,97 @@ export default function ProductCard({ product, cart, setCart }) {
     editProductQuantity();
   }, [quantity]);
 
-  // const setCartEmptyOnFirstLoad = () => {
-  //   const cart = localStorage.getItem('cart');
-  //   if (!cart) {
-
-  //   }
-  // };
-
   useEffect(() => {
     setCart([]);
   }, []);
 
   return (
-    <div>
-      <section>
+    <div
+      className="d-flex
+          justify-content
+          flex-wrap
+          border border-light-subtle
+          container-card
+          cardDimension"
+    >
+      <section
+        className="d-flex
+          justify-content-center
+          flex-wrap
+          w-100
+          h-100"
+      >
+        <div
+          className="
+        d-flex
+        justify-content-start
+        h-25 w-100"
+        >
+          <p
+            className="d-flex
+          justify-content-start
+          text-black
+          font-Roboto
+          fs-5 fw-bold
+          h-25
+          py-2
+          px-3"
+            data-testid={ `customer_products__element-card-price-${product.id}` }
+          >
+            R$
+            {' '}
+            {priceFormatted}
+          </p>
+        </div>
         <img
+          className="d-flex
+          justify-content-center
+          img"
           src={ product.urlImage }
           data-testid={ `customer_products__img-card-bg-image-${product.id}` }
           alt={ `${capitalizeFirstLetter(product.name)} illustration.` }
         />
-        <p data-testid={ `customer_products__element-card-price-${product.id}` }>
-          {priceFormatted}
-        </p>
       </section>
 
-      <section>
-        <p data-testid={ `customer_products__element-card-title-${product.id}` }>
+      <section
+        className="d-flex
+        justify-content-center
+        flex-wrap
+        infCard
+        align-self-center
+        "
+      >
+        <p
+          className="d-flex
+            justify-content-center
+            flex-nowrap
+            nameProducts
+            w-100"
+          data-testid={ `customer_products__element-card-title-${product.id}` }
+        >
           { product.name }
         </p>
 
-        <div>
+        <div
+          className="d-flex
+        justify-content-center
+        flex-nowrap
+        inputQuantity
+        "
+        >
           <button
+            className="btnAddOrRemove
+            rounded-start
+            text-white"
             data-testid={ `customer_products__button-card-add-item-${product.id}` }
             type="button"
             onClick={ handleOnClickAddProduct }
           >
-            Add
+            +
           </button>
 
           <input
+            className="inputQuantityNumber"
             data-testid={ `customer_products__input-card-quantity-${product.id}` }
             value={ quantity }
             onChange={ ({ target: { value } }) => {
@@ -129,15 +161,19 @@ export default function ProductCard({ product, cart, setCart }) {
           />
 
           <button
+            className="btnAddOrRemove
+            rounded-end
+            text-white"
             data-testid={ `customer_products__button-card-rm-item-${product.id}` }
             type="button"
             onClick={ handleOnClickRemoveProduct }
           >
-            Remove
+            -
           </button>
         </div>
       </section>
     </div>
+
   );
 }
 

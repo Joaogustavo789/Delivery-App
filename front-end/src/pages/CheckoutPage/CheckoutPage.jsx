@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import ProductDetailsRow from '../../components/ProductDetailsRow';
@@ -87,72 +88,86 @@ export default function CheckoutPage() {
     <div>
       <Navbar />
       {/* <section data-testid="customer_checkout__element-order-total-price"> */}
-      <div>
-        <h2>Finalizar pedido</h2>
-        {
-          products.map((product, index) => (
-            <ProductDetailsRow
-              key={ `${product.quantity}-${index}-${product}` }
-              product={ product }
-              index={ index }
-              hasRemoveBtn
-              pageName="checkout"
-              reRenderFunc={ () => getProductsFromDeliveryCart() }
-            />
-          ))
-        }
-
-        <h3>Total Price</h3>
-      </div>
-      <span data-testid="customer_checkout__element-order-total-price">
-        {' '}
-        {totalPrice }
-        {' '}
-      </span>
-      <div>
-        <h2>Detalhes e Endereço para Entrega</h2>
-
+      <Container className="d-flex flex-column gap-4">
         <div>
-          <select
-            data-testid="customer_checkout__select-seller"
-            name="select"
-            value={ sellerId }
-            onChange={ ({ target: { value } }) => setSellerId(value) }
-          >
-            <option value={ 0 } selected disabled>
-              Selecione a pessoa vendedora
-            </option>
-            {allSellers.map((seller) => (
-              <option key={ seller.id } value={ seller.id }>{ seller.name }</option>
-            )) }
-          </select>
+          <h3 className="mt-3">Finalizar pedido</h3>
+          <h5 className="mt-3">Produtos</h5>
+          <div className="d-flex flex-column gap-4">
+            <Row className="d-flex flex-column gap-4">
+              {
+                products.map((product, index) => (
+                  <ProductDetailsRow
+                    key={ `${product.quantity}-${index}-${product}` }
+                    product={ product }
+                    index={ index }
+                    hasRemoveBtn
+                    pageName="checkout"
+                    reRenderFunc={ () => getProductsFromDeliveryCart() }
+                  />
+                ))
+              }
+            </Row>
+            <Row>
+              <h5
+                data-testid="customer_checkout__element-order-total-price "
+                className="text-end text-decoration-underline text-success"
+              >
+                {'Total Price: '}
+                {totalPrice }
+                {' '}
+              </h5>
+            </Row>
+          </div>
 
-          <input
-            data-testid="customer_checkout__input-address"
-            value={ deliveryAddress }
-            onChange={ ({ target: { value } }) => setDeliveryAddress(value) }
-            type="text"
-            placeholder="Travessa Terceira da Castanheira, Bairro Muruci"
-          />
-
-          <input
-            data-testid="customer_checkout__input-address-number"
-            value={ deliveryNumber }
-            onChange={ ({ target: { value } }) => setDeliveryNumber(value) }
-            type="text"
-            placeholder="198"
-          />
         </div>
+        <div className="border p-4 d-flex flex-column">
+          <h5>Detalhes e Endereço para Entrega</h5>
+          <div className="d-flex p-2 gap-2">
+            <select
+              data-testid="customer_checkout__select-seller"
+              name="select"
+              value={ sellerId }
+              onChange={ ({ target: { value } }) => setSellerId(value) }
+              className="form-control"
+            >
+              <option value={ 0 } selected disabled>
+                Selecione a pessoa vendedora
+              </option>
+              {allSellers.map((seller) => (
+                <option key={ seller.id } value={ seller.id }>{ seller.name }</option>
+              )) }
+            </select>
 
-        <button
-          data-testid="customer_checkout__button-submit-order"
-          type="button"
-          onClick={ handleOnClickSubmitOrder }
-        >
-          Finalizar pedido
-        </button>
-      </div>
-      {/* </section> */}
+            <input
+              data-testid="customer_checkout__input-address"
+              value={ deliveryAddress }
+              onChange={ ({ target: { value } }) => setDeliveryAddress(value) }
+              type="text"
+              placeholder="Sua rua aqui, seu bairro aqui"
+              className="form-control"
+            />
+
+            <input
+              data-testid="customer_checkout__input-address-number"
+              value={ deliveryNumber }
+              onChange={ ({ target: { value } }) => setDeliveryNumber(value) }
+              type="text"
+              placeholder="número"
+              className="form-control"
+            />
+
+          </div>
+          <button
+            data-testid="customer_checkout__button-submit-order"
+            type="button"
+            onClick={ handleOnClickSubmitOrder }
+            className="btn btn-success mx-2"
+          >
+            Finalizar pedido
+          </button>
+
+        </div>
+      </Container>
     </div>
   );
 }

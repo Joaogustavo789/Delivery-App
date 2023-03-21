@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function SaleProductsTable({ saleProducts }) {
   return (
-    <table>
+    <table className="table table-striped table-hover">
       <thead>
         <tr>
           <th> Item </th>
@@ -41,14 +41,14 @@ export default function SaleProductsTable({ saleProducts }) {
                 `seller_order_details__element-order-table-unit-price-${index}`
               }
             >
-              {sale.products.price}
+              {Number(sale.products.price).toFixed(2)}
             </td>
             <td
               data-testid={
                 `seller_order_details__element-order-table-sub-total-${index}`
               }
             >
-              { sale.quantity * sale.products.price }
+              { (sale.quantity * sale.products.price).toFixed(2) }
             </td>
           </tr>
         ))}

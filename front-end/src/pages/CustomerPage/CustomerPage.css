@@ -1,0 +1,22 @@
+.orderCard {
+  background-color: var(--light-gray);
+}
+
+.Pendente {
+  background-color: var(--gray);
+}
+
+.Entregue {
+  background-color: var(--green-alt);
+  color: white;
+}
+
+.Preparando {
+  background-color: grey;
+  color: white;
+}
+
+.EmTransito {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
