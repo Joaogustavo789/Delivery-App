@@ -137,7 +137,7 @@ function RegisterPage() {
           <Label
             htmlFor="register-password-input"
             text="Senha"
-            Svg={ isPasswordShown ? EyeSlash : Eye }
+            Svg={ isPasswordShown ? Eye : EyeSlash }
             svgOnClick={ () => handleOnClickPasswordEyeSvg() }
           >
             <Input
