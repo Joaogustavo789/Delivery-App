@@ -104,6 +104,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
         <span><strong>Mocha</strong></span><br>
         <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" />
       </td>
+      <td width="80px" align="center">
+        <span><strong>Sinon</strong></span><br>
+        <img height="50" src="https://sinonjs.org/assets/images/logo.png" />
+      </td>
     </tr>
   </tbody>
 </table>
