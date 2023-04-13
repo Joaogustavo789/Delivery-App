@@ -108,6 +108,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
         <span><strong>Sinon</strong></span><br>
         <img height="50" src="https://sinonjs.org/assets/images/logo.png" />
       </td>
+      <td width="80px" align="center">
+        <span><strong>Chai</strong></span><br>
+        <img height="50" src="https://www.vectorlogo.zone/logos/chaijs/chaijs-icon.svg" />
+      </td>
     </tr>
   </tbody>
 </table>
