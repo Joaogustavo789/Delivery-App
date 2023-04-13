@@ -89,7 +89,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>Axios</strong></span><br>
-        <img height="50" src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
+        <img height="50" src="https://user-images.githubusercontent.com/99046967/231778413-392efca3-7b54-4159-b32d-54740357640c.svg" />
       </td>
       <td width="80px" align="center">
         <span><strong>MySQL</strong></span><br>
