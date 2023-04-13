@@ -80,9 +80,9 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
         <span><strong>React</strong></span><br>
         <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
       </td>
-      <td width="80px" align="center">
+      <td width="120px" align="center">
         <span><strong>RTL</strong></span><br>
-        <img width="100" src="https://testing-library.com/img/octopus-128x128.png" />
+        <img src="https://testing-library.com/img/octopus-128x128.png" />
       </td>
       <td width="80px" align="center">
         <span><strong>Bootstrap</strong></span><br>
