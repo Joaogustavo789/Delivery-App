@@ -101,6 +101,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
         <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
       </td>
       <td width="80px" align="center">
+        <span><strong>JWT</strong></span><br>
+        <img height="50" src="https://user-images.githubusercontent.com/99046967/231625900-0153f7dd-35de-4c11-b964-e7cd17783320.png" />
+      </td>
+      <td width="80px" align="center">
         <span><strong>Mocha</strong></span><br>
         <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" />
       </td>
