@@ -78,15 +78,23 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 **Back-end:** Node, Express
 -->
 
-<!--
 ## Documentação
 
-- [React]()
-- [Sequelize.js]()
-- [Node.js]()
-- [Express.js]()
+- [Axios](https://axios-http.com/ptbr/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+### Front-End
+- [React](https://react.dev/)
+- [RTL](https://testing-library.com/)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
+
+### Back-End
+- [Sequelize](https://sequelize.org/)
+- [Node.js](https://nodejs.org/pt-br)
+- [Express.js](https://expressjs.com/pt-br/)
 - [JWT](https://jwt.io/)
--->
 
 ## Feedback
 
