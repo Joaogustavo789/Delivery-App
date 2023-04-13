@@ -93,6 +93,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
         <img height="50" src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
       </td>
       <td width="80px" align="center">
+        <span><strong>MySQL</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+      </td>
+      <td width="80px" align="center">
         <span><strong>Sequelize</strong></span><br>
         <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" />
       </td>
@@ -137,6 +141,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 - [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
 
 ### Back-End
+- [MySQL](https://www.mysql.com/)
 - [Sequelize](https://sequelize.org/)
 - [Node.js](https://nodejs.org/pt-br)
 - [Express.js](https://expressjs.com/pt-br/)
