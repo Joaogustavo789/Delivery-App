@@ -109,7 +109,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>JWT</strong></span><br>
-        <img src="https://user-images.githubusercontent.com/99046967/231625900-0153f7dd-35de-4c11-b964-e7cd17783320.png" />
+        <img height="50" src="https://user-images.githubusercontent.com/99046967/231778849-a0095c6e-9de4-4c67-9c32-334663058703.svg" />
       </td>
       <td width="80px" align="center">
         <span><strong>Mocha</strong></span><br>
