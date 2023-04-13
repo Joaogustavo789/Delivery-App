@@ -82,7 +82,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>RTL</strong></span><br>
-        <img height="50" src="https://testing-library.com/img/octopus-128x128.png" />
+        <img src="https://testing-library.com/img/octopus-128x128.png" />
       </td>
       <td width="80px" align="center">
         <span><strong>Bootstrap</strong></span><br>
@@ -90,7 +90,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>Axios</strong></span><br>
-        <img height="50" src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
+        <img src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
       </td>
       <td width="80px" align="center">
         <span><strong>MySQL</strong></span><br>
@@ -110,7 +110,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>JWT</strong></span><br>
-        <img height="50" src="https://user-images.githubusercontent.com/99046967/231625900-0153f7dd-35de-4c11-b964-e7cd17783320.png" />
+        <img src="https://user-images.githubusercontent.com/99046967/231625900-0153f7dd-35de-4c11-b964-e7cd17783320.png" />
       </td>
       <td width="80px" align="center">
         <span><strong>Mocha</strong></span><br>
