@@ -1,4 +1,3 @@
-
 # Delivery App
 
 Delivery App é uma aplicativo de delivery de bebidas.
@@ -82,7 +81,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="120px" align="center">
         <span><strong>RTL</strong></span><br>
-        <img src="https://testing-library.com/img/octopus-128x128.png" />
+        <img height="50" src="https://user-images.githubusercontent.com/99046967/231777506-b078ca12-0ff1-4b2c-9ed5-81b943033fd9.svg" />
       </td>
       <td width="80px" align="center">
         <span><strong>Bootstrap</strong></span><br>
@@ -90,7 +89,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
       </td>
       <td width="80px" align="center">
         <span><strong>Axios</strong></span><br>
-        <img src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
+        <img height="50" src="https://user-images.githubusercontent.com/99046967/231626536-a81ba595-62ad-4a2f-9241-05129830b2bb.png" />
       </td>
       <td width="80px" align="center">
         <span><strong>MySQL</strong></span><br>
