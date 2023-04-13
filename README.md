@@ -95,6 +95,10 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 - [Node.js](https://nodejs.org/pt-br)
 - [Express.js](https://expressjs.com/pt-br/)
 - [JWT](https://jwt.io/)
+- [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options)
+- [Mocha](https://mochajs.org/)
+- [Sinon](https://sinonjs.org/)
+- [Chai](https://www.chaijs.com/)
 
 ## Feedback
 
