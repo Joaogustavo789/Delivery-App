@@ -70,13 +70,43 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 - [Silvério Moraes](https://github.com/SilverioMoraes)
 - [Victor Yuri](https://github.com/VictorYuriTC)
 
-<!--
+
 ## Stack utilizada
 
-**Front-end:** React, Redux, TailwindCSS
-
-**Back-end:** Node, Express
--->
+<table width="320px" align="center">
+  <tbody>
+    <tr valign="top">
+      <td width="80px" align="center">
+        <span><strong>React</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>RTL</strong></span><br>
+        <img height="50" src="https://testing-library.com/img/octopus-128x128.png" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>Bootstrap</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>Sequelize</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>Node.js</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>Express.js</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+      </td>
+      <td width="80px" align="center">
+        <span><strong>Mocha</strong></span><br>
+        <img height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Documentação
 
